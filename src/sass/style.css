@@ -104,24 +104,38 @@
   width: 100%;
   height: 190px;
 }
-.input .input__field {
-  border: 1px solid black;
+.input__field {
+  border: 1px solid #000;
   position: relative;
   width: 100%;
   padding: 13px;
 }
-.input .input__field_textarea {
+.input__field_textarea {
   width: 100%;
   height: 100%;
   resize: none;
 }
-.input .input__label {
+.input__label {
   position: absolute;
   top: -8px;
   z-index: 1;
   left: 12px;
   background-color: white;
   padding: 0 8px;
+}
+.input__error-field {
+  font-size: 0.8em;
+  color: #ff0000;
+  visibility: hidden;
+}
+.input.invalid {
+  color: #ff0000;
+}
+.input.invalid .input__field {
+  border-color: #ff0000;
+}
+.input.invalid .input__error-field {
+  visibility: visible;
 }
 
 .button {
