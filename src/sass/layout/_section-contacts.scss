@@ -1,0 +1,51 @@
+.section__contacts {
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 60px 91px 35px 52px;
+  gap: 68px;
+
+  .content-part {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+    &__subtitle {
+      font: $font-14-bold;
+      letter-spacing: 0.03em;
+    }
+
+    &__images {
+      display: flex;
+      gap: 20px;
+
+      .contacts__link {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-image: url(../assets/svg/Facebook.svg);
+
+        &:nth-of-type(2) {
+          background-image: url(../assets/svg/Telegram.svg);
+        }
+
+        &:last-of-type {
+          background-image: url(../assets/svg/Instagram.svg);
+        }
+      }
+    }
+  }
+
+  .form  {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+}

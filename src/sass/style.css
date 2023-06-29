@@ -1,0 +1,331 @@
+@font-face {
+  font-family: "Poppins";
+  font-weight: normal;
+  src: url(../assets/fonts/Poppins/Poppins-regular.ttf);
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: bold;
+  src: url(../assets/fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  src: url(../assets/fonts/Poppins/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: "GolosText";
+  font-weight: normal;
+  src: url(../assets/fonts/Golos_text/GolosText-Medium.ttf);
+}
+@font-face {
+  font-family: "GolosText";
+  font-weight: bold;
+  src: url(../assets/fonts/Golos_text/GolosText-Bold.ttf);
+}
+@font-face {
+  font-family: "GolosText";
+  font-weight: 500;
+  src: url(../assets/fonts/Golos_text/GolosText-Medium.ttf);
+}
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 0.03em;
+}
+.heading__subtitle {
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: 36px;
+  font: bold 16px/1.5 "Poppins", "GolosText";
+  z-index: 1;
+}
+.heading__subtitle::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #ffa501;
+  z-index: -1;
+}
+.heading__subtitle_left {
+  display: flex;
+  position: relative;
+  justify-content: initial;
+  padding-left: 10px;
+}
+.heading__subtitle_left::before {
+  left: 0;
+}
+.heading__title {
+  font: bold 36px/60px "Poppins", "GolosText";
+  padding-bottom: 25px;
+}
+.heading__line {
+  width: 60px;
+  height: 3px;
+  background-color: #ffa501;
+}
+.heading_left {
+  align-items: flex-start;
+}
+.heading_left .heading__title {
+  padding-bottom: 0;
+}
+
+.before-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8px;
+}
+.before-content__circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 8px;
+  background-color: #ffa501;
+}
+.before-content__line {
+  height: 100%;
+  width: 1px;
+  background-color: #000;
+}
+
+.input {
+  position: relative;
+  flex-grow: 1;
+  font: 500 12px/1.5 "Poppins", "GolosText";
+}
+.input_textarea {
+  width: 100%;
+  height: 190px;
+}
+.input .input__field {
+  border: 1px solid black;
+  position: relative;
+  width: 100%;
+  padding: 13px;
+}
+.input .input__field_textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+}
+.input .input__label {
+  position: absolute;
+  top: -8px;
+  z-index: 1;
+  left: 12px;
+  background-color: white;
+  padding: 0 8px;
+}
+
+.button {
+  display: block;
+  padding: 12px 26px;
+  font: bold 14px/1.5 "Poppins", "GolosText";
+  background-color: #ffa501;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+  gap: 60px;
+}
+.section__contacts {
+  flex-direction: row;
+  align-items: flex-start;
+}
+.section .section__content {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding-right: 24px;
+}
+.section .skills__content {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  width: 375px;
+}
+.section .skills__content .skills__title {
+  font: 700 20px/1.5 "Poppins", "GolosText";
+}
+.section .skills-container {
+  display: flex;
+  gap: 35px;
+}
+.section .skill__heading {
+  display: flex;
+  gap: 20px;
+}
+.section .skill__heading__logo {
+  background-color: #ffa501;
+  position: relative;
+  border-radius: 18px;
+  width: 36px;
+  height: 36px;
+}
+.section .skill__heading__logo::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 42px;
+  height: 1px;
+  background-color: #000;
+  top: 18px;
+  left: -42px;
+}
+.section .skill__heading__logo .skill__heading__img {
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+}
+.section .skill__heading__title {
+  font: bold 14px/1.5 "Poppins", "GolosText";
+}
+.section .skill__heading__subtitle {
+  font: 500 12px/1.5 "Poppins", "GolosText";
+}
+.section .skill__heading__title {
+  font: bold 14px/1.5 "Poppins", "GolosText";
+}
+.section .skill {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.section .skill__description {
+  padding-bottom: 5px;
+  font: 500 12px/1.5 "Poppins", "GolosText";
+}
+
+.section__contacts {
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 60px 91px 35px 52px;
+  gap: 68px;
+}
+.section__contacts .content-part {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.section__contacts .contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.section__contacts .contacts__subtitle {
+  font: bold 14px/1.5 "Poppins", "GolosText";
+  letter-spacing: 0.03em;
+}
+.section__contacts .contacts__images {
+  display: flex;
+  gap: 20px;
+}
+.section__contacts .contacts__images .contacts__link {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(../assets/svg/Facebook.svg);
+}
+.section__contacts .contacts__images .contacts__link:nth-of-type(2) {
+  background-image: url(../assets/svg/Telegram.svg);
+}
+.section__contacts .contacts__images .contacts__link:last-of-type {
+  background-image: url(../assets/svg/Instagram.svg);
+}
+.section__contacts .form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: "Poppins", "GolosText";
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background: url("../assets/Background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50rem;
+}
+.header .header__content {
+  width: 1140px;
+  margin: 0 auto;
+  flex-shrink: 1;
+  position: relative;
+  right: 60px;
+  bottom: 96px;
+}
+.header .header__links {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+.header .header__title {
+  font: 700 48px/60px "Poppins", "GolosText";
+}
+
+.section {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  bottom: 5px;
+  padding: 0 50px;
+  font: bold 16px/1.5 "Poppins", "GolosText";
+  letter-spacing: 0.03em;
+}
+.social-links__line {
+  height: 70px;
+  width: 2px;
+  background-color: #000;
+}
+.social-links__text {
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+}
+.social-links .social-links__link {
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-image: url(../assets/svg/Facebook.svg);
+  background-size: contain;
+  transform: rotate(270deg);
+}
+.social-links .social-links__link:nth-of-type(2) {
+  background-image: url(../assets/svg/Instagram.svg);
+}
+.social-links .social-links__link:last-of-type {
+  background-image: url(../assets/svg/Github.svg);
+  transform: rotate(0);
+}/*# sourceMappingURL=style.css.map */

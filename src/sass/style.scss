@@ -1,0 +1,99 @@
+@import './abstract/variables';
+@import './abstract/fonts';
+
+@import './components/heading';
+@import './components/before-content';
+@import './components/input';
+@import './components/button';
+
+@import './layout/main';
+@import './layout/section-contacts';
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: 'Poppins', 'GolosText';
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background: url('../assets/Background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50rem;
+
+  .header__content {
+    width: 1140px;
+    margin: 0 auto;
+    flex-shrink: 1;
+    position: relative;
+    right: 60px;
+    bottom: 96px;
+  }
+
+  .header__links {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+  }
+
+  .header__title {
+    font: $font-48;
+  }
+}
+
+.section {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  bottom: 5px;
+  padding: 0 50px;
+  font: $subtitle-font;
+  letter-spacing: 0.03em;
+
+  &__line {
+    height: 70px;
+    width: 2px;
+    background-color: $color-black;
+  }
+
+  &__text {
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+  }
+
+  .social-links__link {
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-image: url(../assets/svg/Facebook.svg);
+    background-size: contain;
+    transform: rotate(270deg);
+
+    &:nth-of-type(2) {
+      background-image: url(../assets/svg/Instagram.svg);
+    }
+
+    &:last-of-type {
+      background-image: url(../assets/svg/Github.svg);
+      transform: rotate(0);
+    }
+  }
+}
