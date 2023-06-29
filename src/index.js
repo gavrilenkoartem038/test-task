@@ -35,7 +35,7 @@ const validateEmail = (value) => {
 }
 
 const validateArea = (value) => {
-  if (value.length >=2 && value.length <= 100) return true;
+  if (value.length >=2 && value.length <= 200) return true;
   return false;
 }
 

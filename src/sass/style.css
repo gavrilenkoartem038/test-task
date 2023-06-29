@@ -113,6 +113,7 @@
   position: relative;
   flex-grow: 1;
   font: 500 12px/1.5 "Poppins", "GolosText", sans-serif;
+  min-width: 200px;
 }
 .input_textarea {
   width: 100%;
