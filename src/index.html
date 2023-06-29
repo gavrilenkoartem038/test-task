@@ -25,9 +25,34 @@
           <a class="button_secondary">Про меня</a>
         </div>
       </div>
+      <nav class="nav">
+        <div class="cross">
+          <span class="cross__line cross__line_1"></span>
+          <span class="cross__line cross__line_2"></span>
+        </div>
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#">ПРО МЕНЯ</a></li>
+          <li class="nav__item"><a class="nav__link" href="#benefits">МОЙ ОПЫТ</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">МОИ НАВЫКИ</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">МОИ РАБОТЫ</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">ПРАЙС-ЛИСТ</a></li>
+          <li class="nav__item"><a class="nav__link" href="#contacts">КОНТАКТЫ</a></li>
+        </ul>
+        <div class="social-links social-links_nav">
+          <a class="social-links__link"></a>
+          <a class="social-links__link"></a>
+          <a class="social-links__link"></a>
+        </div>
+      </nav>
+      <div class="burger" id="burger">
+        <span class="burger__line burger__line_1"></span>
+        <span class="burger__line burger__line_2"></span>
+        <span class="burger__line burger__line_3"></span>
+      </div>
+      <div class="dark"></div>
     </header>
     <main class="main">
-      <section class="section section__benefits">
+      <section class="section section__benefits" id="benefits">
         <div class="heading">
           <div class="heading__subtitle">Опыт</div>
           <div class="heading__title">Чем я буду полезна</div>
@@ -104,7 +129,7 @@
           </div>
         </div>
       </section>
-      <section class="section section__contacts">
+      <section class="section section__contacts" id="contacts">
         <div class="image-part">
           <img src="./assets/Photo.png" alt="photo">
         </div>
@@ -129,11 +154,11 @@
               </div>
               <div class="input">
                 <label for="email" class="input__label">Ваша почта</label>
-                <input type="text" id="email" class="input__field">
+                <input type="email" id="email" class="input__field">
               </div>
               <div class="input input_textarea">
-                <label for="email" class="input__label">Ваше сообщение</label>
-                <textarea id="email" class="input__field input__field_textarea"></textarea>
+                <label for="area" class="input__label">Ваше сообщение</label>
+                <textarea id="area" class="input__field input__field_textarea"></textarea>
               </div>
               <button class="button">Отправить сообщение</button>
             </form>
@@ -143,5 +168,6 @@
       </section>
     </main>
   </div>
+  <script src="index.js"></script>
 </body>
 </html>

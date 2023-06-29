@@ -1,0 +1,24 @@
+.cross {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-end;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  &__line {
+    position: absolute;
+    border-radius: 2px;
+    height: 3px;
+    width: 40px;
+    transform: rotate(45deg);
+    background: $color-black;
+    left: -4px;
+
+    &_2 {
+      transform: rotate(135deg);
+    }
+  }
+}

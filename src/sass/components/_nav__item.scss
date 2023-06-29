@@ -1,0 +1,19 @@
+.nav__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font: $font-24;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    border: 1px solid black;
+  }
+
+  .nav__link {
+    color: $color-white;
+  }
+}

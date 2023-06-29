@@ -5,6 +5,10 @@
 @import './components/before-content';
 @import './components/input';
 @import './components/button';
+@import './components/nav';
+@import './components/nav__item';
+@import './components/burger';
+@import './components/cross';
 
 @import './layout/main';
 @import './layout/section-contacts';
@@ -15,6 +19,30 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+  color: $color-black;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .wrapper {
@@ -67,6 +95,10 @@
   padding: 0 50px;
   font: $subtitle-font;
   letter-spacing: 0.03em;
+
+  &_nav {
+    transform: rotate(90deg);
+  }
 
   &__line {
     height: 70px;
