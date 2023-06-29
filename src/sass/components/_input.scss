@@ -6,13 +6,15 @@
   &_textarea {
     width: 100%;
     height: 190px;
+    margin-bottom: 13px;
   }
   
   &__field {
     border: 1px solid $color-black;
     position: relative;
     width: 100%;
-    padding: 13px;
+    padding: 14px 20px;
+    height: 45px;
 
     &_textarea {
       width: 100%;

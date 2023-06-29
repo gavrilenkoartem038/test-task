@@ -12,7 +12,7 @@
   }
 
   &__line {
-    height: 100%;
+    height: calc(100% - 24px);
     width: 1px;
     background-color: $color-black;
   }

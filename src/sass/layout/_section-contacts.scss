@@ -1,8 +1,26 @@
 .section__contacts {
   flex-direction: row;
   align-items: flex-start;
-  padding: 60px 91px 35px 52px;
+  padding: 60px 35px 91px 52px;
   gap: 68px;
+
+  @media screen and (max-width: 991px) {
+    flex-direction: column;
+    padding: 40px 20px 50px;
+
+    .image-part {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    padding: 40px 10px 50px;
+
+    .image-part {
+      display: none;
+    }
+  }
 
   .content-part {
     display: flex;
@@ -25,6 +43,7 @@
     &__images {
       display: flex;
       gap: 20px;
+      padding-left: 2px;
 
       .contacts__link {
         display: block;
@@ -34,18 +53,33 @@
 
         &:nth-of-type(2) {
           background-image: url(../assets/svg/Telegram.svg);
+          margin-left: 5px;
         }
 
         &:last-of-type {
           background-image: url(../assets/svg/Instagram.svg);
         }
       }
+
+      @media screen and (max-width: 767px) {
+        padding-left: 0;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      gap: 19px; 
     }
   }
 
   .form  {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    column-gap: 25px;
+    row-gap: 15px;
+    padding-top: 10px;
+
+    @media screen and (max-width: 767px) {
+      justify-content: center;
+    }
   }
 }

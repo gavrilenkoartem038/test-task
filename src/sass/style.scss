@@ -55,34 +55,56 @@ body.lock {
   display: flex;
   align-items: center;
   background: url('../assets/Background.png');
-  background-position: center;
+  background-position-y: -108px;
   background-repeat: no-repeat;
   background-size: cover;
   height: 50rem;
 
-  .header__content {
-    width: 1140px;
+  &__content {
+    align-self: flex-start;
+    max-width: 1140px;
+    width: 100%;
     margin: 0 auto;
-    flex-shrink: 1;
     position: relative;
     right: 60px;
-    bottom: 96px;
+    top: 200px;
   }
 
-  .header__links {
+  &__links {
     display: flex;
     align-items: center;
     gap: 44px;
   }
 
-  .header__title {
+  &__title {
     font: $font-48;
+    letter-spacing: 0.02em;
+    padding-top: 3px;
+    padding-bottom: 34px;
   }
-}
 
-.section {
-  max-width: 1140px;
-  margin: 0 auto;
+  @media screen and (max-width: 1439px) {
+    background-position: center;
+
+    &__content {
+      right: 0;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 0 10px;
+    height: 40rem;
+
+    &__content {
+      margin: 0;
+      right: 0;
+    }
+
+    &__title {
+      font: $font-26;
+      padding-bottom: 31px;
+    }
+  }
 }
 
 .social-links {
@@ -92,12 +114,13 @@ body.lock {
   gap: 15px;
   position: relative;
   bottom: 5px;
-  padding: 0 50px;
+  padding: 0 46px 0 50px;
   font: $subtitle-font;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
 
   &_nav {
     transform: rotate(90deg);
+    padding: 0 50px;
   }
 
   &__line {
@@ -126,6 +149,12 @@ body.lock {
     &:last-of-type {
       background-image: url(../assets/svg/Github.svg);
       transform: rotate(0);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &:not(.social-links_nav) {
+      display: none;
     }
   }
 }
