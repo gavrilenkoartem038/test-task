@@ -313,6 +313,32 @@ template {
   display: none;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: "Poppins";
   font-weight: normal;
@@ -428,7 +454,7 @@ template {
   position: relative;
   flex-grow: 1;
   font: 500 12px/1.5 "Poppins", "GolosText", sans-serif;
-  min-width: 200px;
+  min-width: 180px;
 }
 .input_textarea {
   width: 100%;
@@ -648,6 +674,120 @@ template {
   }
 }
 
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  bottom: 5px;
+  padding: 0 46px 0 50px;
+  font: bold 16px/1.5 "Poppins", "GolosText", sans-serif;
+  letter-spacing: 0.02em;
+}
+.social-links_nav {
+  transform: rotate(90deg);
+  padding: 0 50px;
+}
+.social-links__line {
+  height: 70px;
+  width: 2px;
+  background-color: #000;
+}
+.social-links__text {
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+}
+.social-links .social-links__link {
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-image: url(../assets/svg/Facebook.svg);
+  background-size: contain;
+  transform: rotate(270deg);
+  transition: all 0.3s ease;
+}
+.social-links .social-links__link:hover {
+  filter: invert(79%) sepia(50%) saturate(5519%) hue-rotate(0deg) brightness(106%) contrast(103%);
+}
+.social-links .social-links__link:nth-of-type(2) {
+  background-image: url(../assets/svg/Instagram.svg);
+}
+.social-links .social-links__link:last-of-type {
+  background-image: url(../assets/svg/Github.svg);
+  transform: rotate(0);
+}
+.social-links_nav .social-links__link:hover {
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(173deg) brightness(106%) contrast(101%);
+}
+@media screen and (max-width: 767px) {
+  .social-links:not(.social-links_nav) {
+    display: none;
+  }
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: "Poppins", "GolosText";
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background: url("../assets/images/Background.png");
+  background-position-y: -108px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50rem;
+}
+.header__content {
+  align-self: flex-start;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  right: 60px;
+  top: 200px;
+}
+.header__links {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+.header__title {
+  font: 700 48px/60px "Poppins", "GolosText", sans-serif;
+  letter-spacing: 0.02em;
+  padding-top: 3px;
+  padding-bottom: 34px;
+}
+@media screen and (max-width: 1439px) {
+  .header {
+    background-position: center;
+  }
+  .header__content {
+    right: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 0 10px;
+    height: 40rem;
+  }
+  .header__content {
+    margin: 0;
+    right: 0;
+  }
+  .header__title {
+    font: 700 26px/1.5 "Poppins", "GolosText", sans-serif;
+    padding-bottom: 31px;
+  }
+}
+
 .section {
   display: flex;
   flex-direction: column;
@@ -781,6 +921,7 @@ template {
 @media screen and (max-width: 991px) {
   .section__contacts {
     flex-direction: column;
+    align-items: center;
     padding: 40px 20px 50px;
   }
   .section__contacts .image-part {
@@ -800,6 +941,7 @@ template {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 700px;
   width: 100%;
 }
 .section__contacts .contacts {
@@ -851,149 +993,10 @@ template {
        column-gap: 25px;
   row-gap: 15px;
   padding-top: 10px;
+  max-width: 700px;
 }
 @media screen and (max-width: 767px) {
   .section__contacts .form {
     justify-content: center;
-  }
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-* {
-  scroll-behavior: smooth;
-}
-
-a:active,
-a:hover,
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-li {
-  list-style-type: none;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-body.lock {
-  overflow: hidden;
-}
-
-.wrapper {
-  box-sizing: border-box;
-  margin: 0 auto;
-  font-family: "Poppins", "GolosText";
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  background: url("../assets/Background.png");
-  background-position-y: -108px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 50rem;
-}
-.header__content {
-  align-self: flex-start;
-  max-width: 1140px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  right: 60px;
-  top: 200px;
-}
-.header__links {
-  display: flex;
-  align-items: center;
-  gap: 44px;
-}
-.header__title {
-  font: 700 48px/60px "Poppins", "GolosText", sans-serif;
-  letter-spacing: 0.02em;
-  padding-top: 3px;
-  padding-bottom: 34px;
-}
-@media screen and (max-width: 1439px) {
-  .header {
-    background-position: center;
-  }
-  .header__content {
-    right: 0;
-  }
-}
-@media screen and (max-width: 767px) {
-  .header {
-    padding: 0 10px;
-    height: 40rem;
-  }
-  .header__content {
-    margin: 0;
-    right: 0;
-  }
-  .header__title {
-    font: 700 26px/1.5 "Poppins", "GolosText", sans-serif;
-    padding-bottom: 31px;
-  }
-}
-
-.social-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  position: relative;
-  bottom: 5px;
-  padding: 0 46px 0 50px;
-  font: bold 16px/1.5 "Poppins", "GolosText", sans-serif;
-  letter-spacing: 0.02em;
-}
-.social-links_nav {
-  transform: rotate(90deg);
-  padding: 0 50px;
-}
-.social-links__line {
-  height: 70px;
-  width: 2px;
-  background-color: #000;
-}
-.social-links__text {
-  transform: rotate(180deg);
-  writing-mode: vertical-rl;
-}
-.social-links .social-links__link {
-  display: block;
-  height: 20px;
-  width: 20px;
-  background-image: url(../assets/svg/Facebook.svg);
-  background-size: contain;
-  transform: rotate(270deg);
-  transition: all 0.3s ease;
-}
-.social-links .social-links__link:hover {
-  filter: invert(79%) sepia(50%) saturate(5519%) hue-rotate(0deg) brightness(106%) contrast(103%);
-}
-.social-links .social-links__link:nth-of-type(2) {
-  background-image: url(../assets/svg/Instagram.svg);
-}
-.social-links .social-links__link:last-of-type {
-  background-image: url(../assets/svg/Github.svg);
-  transform: rotate(0);
-}
-.social-links_nav .social-links__link:hover {
-  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(173deg) brightness(106%) contrast(101%);
-}
-@media screen and (max-width: 767px) {
-  .social-links:not(.social-links_nav) {
-    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

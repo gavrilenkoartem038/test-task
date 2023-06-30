@@ -1,0 +1,65 @@
+body.lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: 'Poppins', 'GolosText';
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background: url('../assets/images/Background.png');
+  background-position-y: -108px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50rem;
+
+  &__content {
+    align-self: flex-start;
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    right: 60px;
+    top: 200px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+  }
+
+  &__title {
+    font: $font-48;
+    letter-spacing: 0.02em;
+    padding-top: 3px;
+    padding-bottom: 34px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    background-position: center;
+
+    &__content {
+      right: 0;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 0 10px;
+    height: 40rem;
+
+    &__content {
+      margin: 0;
+      right: 0;
+    }
+
+    &__title {
+      font: $font-26;
+      padding-bottom: 31px;
+    }
+  }
+}
