@@ -21,7 +21,7 @@ nav.addEventListener('click', function (e) {
 //form validation
 
 const formElements = document.querySelectorAll('.input');
-const inputFields = document.querySelectorAll('.input__field');
+const inputFields = document.querySelectorAll('.input-selector');
 const form = document.querySelector('.form');
 
 const validateText = (value) => {
@@ -49,6 +49,8 @@ const validateElement = (element) => {
       return validateEmail(value);
     case 'textarea':
       return validateArea(value);
+    case 'checkbox':
+      return element.checked;
   }
 };
 

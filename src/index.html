@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test task</title>
   <link rel="stylesheet" href="./sass/style.css">
-  <link rel="stylesheet" href="./normalize.css">
 </head>
 <body>
   <div class="wrapper">
@@ -150,20 +149,27 @@
             <form class="form" novalidate>
               <div class="input">
                 <label for="name" class="input__label">Ваше имя</label>
-                <input type="text" name="name" id="name" class="input__field">
+                <input type="text" name="name" id="name" class="input__field input-selector">
                 <div class="input__error-field">Введите от 2 до 50 символов</div>
               </div>
               <div class="input">
                 <label for="email" class="input__label">Ваша почта</label>
-                <input type="email" name="email" id="email" class="input__field">
-                <div class="input__error-field">Введите email в формате example@email.com</div>
+                <input type="email" name="email" id="email" class="input__field input-selector">
+                <div class="input__error-field">Формат: example@email.com</div>
               </div>
               <div class="input input_textarea">
                 <label for="area" class="input__label">Ваше сообщение</label>
-                <textarea id="area" name="message" class="input__field input__field_textarea"></textarea>
+                <textarea id="area" name="message" class="input__field input__field_textarea input-selector"></textarea>
                 <div class="input__error-field">Введите от 2 до 200 символов</div>
               </div>
               <button class="button">Отправить сообщение</button>
+              <div class="checkbox-container">
+                <div class="checkbox input">
+                  <input type="checkbox" id="checkbox" name="checkbox" class="checkbox__field input-selector"></input>
+                  <label for="checkbox" class="checkbox__label">Я согласен(a) c <span>политикой <br> конфиденциальности</span></label>
+                </div>
+                <div class="input__error-field">Вы должны согласиться с условиями</div>
+              </div>
             </form>
           </div>
         </div>

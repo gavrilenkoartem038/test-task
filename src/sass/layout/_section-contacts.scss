@@ -80,14 +80,20 @@
 
   .form {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     column-gap: 25px;
     row-gap: 15px;
     padding-top: 10px;
     max-width: 700px;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 446px) {
       justify-content: center;
+      row-gap: 5px;
+
+      .button {
+        order: 1;
+      }
     }
   }
 }
