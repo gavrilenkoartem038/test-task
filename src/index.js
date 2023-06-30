@@ -20,24 +20,24 @@ nav.addEventListener('click', function (e) {
 
 //form validation
 
-const formElements= document.querySelectorAll('.input');
+const formElements = document.querySelectorAll('.input');
 const inputFields = document.querySelectorAll('.input__field');
 const form = document.querySelector('.form');
 
 const validateText = (value) => {
-  if (value.length >=2 && value.length <= 50) return true;
+  if (value.length >= 2 && value.length <= 50) return true;
   return false;
-}
+};
 
 const validateEmail = (value) => {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(value);
-}
+};
 
 const validateArea = (value) => {
-  if (value.length >=2 && value.length <= 200) return true;
+  if (value.length >= 2 && value.length <= 200) return true;
   return false;
-}
+};
 
 const validateElement = (element) => {
   const type = element.type;
@@ -50,28 +50,42 @@ const validateElement = (element) => {
     case 'textarea':
       return validateArea(value);
   }
-}
+};
 
-const validateForm = () =>  {
-  formElements.forEach(el => el.classList.remove('invalid'));
+const validateForm = () => {
+  formElements.forEach((el) => el.classList.remove('invalid'));
   const inputFieldsArray = Array.from(inputFields);
   const invalidElements = inputFieldsArray.filter((el) => !validateElement(el));
 
   invalidElements.forEach((el) => el.parentElement.classList.add('invalid'));
 
   return invalidElements.length === 0;
-}
+};
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  inputFields.forEach(el => el.addEventListener('input', validateForm ));
+  inputFields.forEach((el) => el.addEventListener('input', validateForm));
   if (validateForm()) {
+    sendFormData();
     clearFields();
-  };
+  }
 });
 
 const clearFields = () => {
-  inputFields.forEach(el => el.removeEventListener('input', validateForm ));
-  inputFields.forEach(el => el.value = '')
+  inputFields.forEach((el) => el.removeEventListener('input', validateForm));
+  inputFields.forEach((el) => (el.value = ''));
   console.log('valid');
-}
+};
+
+//http request example
+const sendFormData = () => {
+  const payload = new FormData(form);
+
+  fetch('http://httpbin.org/post', {
+    method: 'POST',
+    body: payload,
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json))
+    .catch((error) => console.log(error));
+};

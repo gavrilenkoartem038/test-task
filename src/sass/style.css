@@ -162,12 +162,19 @@
   background-color: #ffa501;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   letter-spacing: 0.03em;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.button:active {
+  transform: translateY(4px);
+  box-shadow: none;
 }
 
 .secondary-button {
   display: block;
   font: bold 14px/1.5 "Poppins", "GolosText", sans-serif;
   letter-spacing: 0.03em;
+  cursor: pointer;
 }
 
 .nav {

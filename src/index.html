@@ -21,8 +21,8 @@
         <div class="header__subtitle heading__subtitle heading__subtitle_left">Меня зовут Александра Смит</div>
         <h1 class="header__title">Я web-разработчик <br> из города Москва</h1>
         <div class="header__links links">
-          <a class="button">Портфолио</a>
-          <a class="secondary-button">Про меня</a>
+          <a class="button" href="#">Портфолио</a>
+          <a class="secondary-button" href="#">Про меня</a>
         </div>
       </div>
       <nav class="nav">
@@ -150,17 +150,17 @@
             <form class="form" novalidate>
               <div class="input">
                 <label for="name" class="input__label">Ваше имя</label>
-                <input type="text" id="name" class="input__field">
+                <input type="text" name="name" id="name" class="input__field">
                 <div class="input__error-field">Введите от 2 до 50 символов</div>
               </div>
               <div class="input">
                 <label for="email" class="input__label">Ваша почта</label>
-                <input type="email" id="email" class="input__field">
+                <input type="email" name="email" id="email" class="input__field">
                 <div class="input__error-field">Введите email в формате example@email.com</div>
               </div>
               <div class="input input_textarea">
                 <label for="area" class="input__label">Ваше сообщение</label>
-                <textarea id="area" class="input__field input__field_textarea"></textarea>
+                <textarea id="area" name="message" class="input__field input__field_textarea"></textarea>
                 <div class="input__error-field">Введите от 2 до 200 символов</div>
               </div>
               <button class="button">Отправить сообщение</button>
