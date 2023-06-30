@@ -8,6 +8,10 @@
   transition: all 0.2s ease;
   cursor: pointer;
 
+  &:hover {
+    transform: scale(1.03);
+  }
+
   &:active {
     transform: translateY(4px);
     box-shadow: none;
@@ -19,4 +23,9 @@
   font: $font-14-bold;
   letter-spacing: 0.03em;
   cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $color-orange;
+  }
 }

@@ -7,6 +7,15 @@
   width: 30px;
   height: 30px;
   cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+
+    .cross__line {
+      background-color: $color-white;
+    }
+  }
 
   &__line {
     position: absolute;

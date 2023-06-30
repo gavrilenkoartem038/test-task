@@ -15,5 +15,10 @@
 
   .nav__link {
     color: $color-white;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: #78d9ff;
+    }
   }
 }

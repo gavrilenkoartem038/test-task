@@ -50,6 +50,11 @@
         width: 30px;
         height: 30px;
         background-image: url(../assets/svg/Facebook.svg);
+        transition: all 0.3s ease;
+
+        &:hover {
+          filter: invert(79%) sepia(50%) saturate(5519%) hue-rotate(0deg) brightness(106%) contrast(103%);
+        }
 
         &:nth-of-type(2) {
           background-image: url(../assets/svg/Telegram.svg);
@@ -67,11 +72,11 @@
     }
 
     @media screen and (max-width: 767px) {
-      gap: 19px; 
+      gap: 19px;
     }
   }
 
-  .form  {
+  .form {
     display: flex;
     flex-wrap: wrap;
     column-gap: 25px;

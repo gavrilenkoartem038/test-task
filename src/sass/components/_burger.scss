@@ -9,6 +9,15 @@
   top: 20px;
   right: 30px;
   cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+
+    .burger__line {
+      background-color: $color-orange;
+    }
+  }
 
   &__line {
     height: 3px;

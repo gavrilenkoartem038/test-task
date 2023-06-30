@@ -1,3 +1,5 @@
+@import './base/normalize';
+
 @import './abstract/variables';
 @import './abstract/fonts';
 
@@ -141,6 +143,11 @@ body.lock {
     background-image: url(../assets/svg/Facebook.svg);
     background-size: contain;
     transform: rotate(270deg);
+    transition: all 0.3s ease;
+
+    &:hover {
+      filter: invert(79%) sepia(50%) saturate(5519%) hue-rotate(0deg) brightness(106%) contrast(103%);
+    }
 
     &:nth-of-type(2) {
       background-image: url(../assets/svg/Instagram.svg);
@@ -149,6 +156,14 @@ body.lock {
     &:last-of-type {
       background-image: url(../assets/svg/Github.svg);
       transform: rotate(0);
+    }
+  }
+
+  &_nav {
+    .social-links__link {
+      &:hover {
+        filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(173deg) brightness(106%) contrast(101%);
+      }
     }
   }
 
