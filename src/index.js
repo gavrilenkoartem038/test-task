@@ -75,7 +75,13 @@ form.addEventListener('submit', (e) => {
 
 const clearFields = () => {
   inputFields.forEach((el) => el.removeEventListener('input', validateForm));
-  inputFields.forEach((el) => (el.value = ''));
+  inputFields.forEach((el) => {
+    if (el.type === 'checkbox') {
+      el.checked = false;
+    } else {
+      el.value = '';
+    }
+  });
   console.log('valid');
 };
 
